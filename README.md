@@ -55,10 +55,11 @@ common-tools
 	6、org.jiaozhu.commonTools.net.URLUtil 将相对、绝对路径转换为URL对象，用于网络或文件流的读写，Setting的配置依赖此工具包
 	
 四、线程相关工具类
-	1、org.jiaozhu.commonTools.thread.BaseRunnable 此类实现了Runnable接口，扩展了功能。
-		增加名称、ID，调用次数和时间统计、线程停止接口等，并且在线程运行时，不允许此线程第二次启动。
-	
-	2、org.jiaozhu.commonTools.thread.Executor 线程池工具类
+
+	1、org.jiaozhu.commonTools.thread.BaseRunnable 此类实现了Runnable接口，扩展了功能。		 
+		 增加名称、ID，调用次数和时间统计、线程停止接口等，并且在线程运行时，不允许此线程第二次启动。
+
+	2、org.jiaozhu.commonTools.thread.Executor 线程池工具类		
 		调用静态方法execute()启动线程，此线程在公共的线程池中执行
 		若想自定义线程池大小或独立控制，可调用newExecutor()实例化一个线程池
 		excAsync()执行一个异步方法
