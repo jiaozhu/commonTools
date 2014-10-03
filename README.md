@@ -1,7 +1,7 @@
 Java通用工具类
 ============
 
-一、数据库工具类
+## 一、数据库工具类 ##
   
   1、org.jiaozhu.commonTools.db.ds
 		
@@ -28,7 +28,7 @@ Java通用工具类
         参考Apache的DbUtils工具包，封装了常用的增删改查方法，与com.baijob.commonTools.db.RsHandler配合使用
 		org.jiaozhu.commonTools.db.RsHandler接口与Apache的DbUtils的ResultSetHandler等价，抽象结果集处理。
 		
-二、邮件工具类
+## 二、邮件工具类 ##
 	
    1、org.jiaozhu.commonTools.mail.MailAccount 
    
@@ -40,7 +40,7 @@ Java通用工具类
         邮件发送工具类，方法请参考注释
         此工具类依赖javax.mail，请参考pom.xml添加依赖或手动下载
 	
-三、网络相关工具类
+## 三、网络相关工具类 ##
 	
    1、org.jiaozhu.commonTools.net.AccessControl
    
@@ -73,7 +73,7 @@ Java通用工具类
    
         将相对、绝对路径转换为URL对象，用于网络或文件流的读写，Setting的配置依赖此工具包
 	
-四、线程相关工具类
+## 四、线程相关工具类 ##
 
    1、org.jiaozhu.commonTools.thread.BaseRunnable 
    
