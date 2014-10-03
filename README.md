@@ -1,4 +1,4 @@
-common-tools
+Java通用工具类
 ============
 
 一、数据库工具类
@@ -16,52 +16,77 @@ common-tools
 		
   2、org.jiaozhu.commonTools.db.DbUtil
 		
-	数据库工具类，提供了关闭方法：关闭可以传入多个参数，关闭的顺序是按照参数的顺序来的，用于一次性关闭Connnection、Statement、ResultSet等
+	    数据库工具类，提供了关闭方法：关闭可以传入多个参数，关闭的顺序是按照参数的顺序来的，用于一次性关闭Connnection、Statement、ResultSet等
 	newSqlRunner方法用于快速新建一个SqlRunner（此类介绍参考下问）
 		
-  3、org.jiaozhu.commonTools.db.DsSetting，用于读取db.setting文件辅助类，内部使用
+  3、org.jiaozhu.commonTools.db.DsSetting
+  
+        用于读取db.setting文件辅助类，内部使用
 	
-  4、org.jiaozhu.commonTools.db.SqlRunner类参考Apache的DbUtils工具包，封装了常用的增删改查方法，与com.baijob.commonTools.db.RsHandler配合使用
+  4、org.jiaozhu.commonTools.db.SqlRunner
+  
+        参考Apache的DbUtils工具包，封装了常用的增删改查方法，与com.baijob.commonTools.db.RsHandler配合使用
 		org.jiaozhu.commonTools.db.RsHandler接口与Apache的DbUtils的ResultSetHandler等价，抽象结果集处理。
 		
 二、邮件工具类
 	
-   1、org.jiaozhu.commonTools.mail.MailAccount 邮件账户类。
+   1、org.jiaozhu.commonTools.mail.MailAccount 
+   
+        邮件账户类。
 		可以调用MailAccount(String accountSettingFileBaseClassLoader)读取相对路径的Setting文件，配置参考mailAccount-example.setting
 		
-   2、org.jiaozhu.commonTools.mail.MailUtil邮件发送工具类，方法请参考注释
-	
-   此工具类依赖javax.mail，请参考pom.xml添加依赖或手动下载
+   2、org.jiaozhu.commonTools.mail.MailUtil
+   
+        邮件发送工具类，方法请参考注释
+        此工具类依赖javax.mail，请参考pom.xml添加依赖或手动下载
 	
 三、网络相关工具类
 	
-   1、org.jiaozhu.commonTools.net.AccessControl访问控制，基于配置文件，可以设定IP白名单或黑名单，可以通过配置文件实现简单的账户验证。
+   1、org.jiaozhu.commonTools.net.AccessControl
+   
+        访问控制，基于配置文件，可以设定IP白名单或黑名单，可以通过配置文件实现简单的账户验证。
 		配置文件请参考access-example.xml
 	
-   2、org.jiaozhu.commonTools.net.Connector 连接对象实体类，有host、端口、用户名、密码等属性
+   2、org.jiaozhu.commonTools.net.Connector 
+   
+        连接对象实体类，有host、端口、用户名、密码等属性
 	
-   3、org.jiaozhu.commonTools.net.HtmlUtil HTML工具类，暂时只提供特殊字符转义
+   3、org.jiaozhu.commonTools.net.HtmlUtil 
+   
+        HTML工具类，暂时只提供特殊字符转义
 	
-   4、org.jiaozhu.commonTools.net.SocketUtil socket工具类。
+   4、org.jiaozhu.commonTools.net.SocketUtil 
+   
+        socket工具类。
 		isUsableLocalPort() 检测本地某个端口是否可用（可用是指没有被其他程序占用）
 		isValidPort()是否是符合规范的端口号
 		longToIpv4()将long转换为ipv4地址，反方法是ipv4ToLong()
 		netCat()简易的数据发送方法
 		
-   5、org.jiaozhu.commonTools.net.SSHUtil SSH相关工具类
+   5、org.jiaozhu.commonTools.net.SSHUtil
+    
+        SSH相关工具类
 		getSession()获得一个SSH会话
 		bindPort()将远程主机的端口映射到本地某个端口
 		
-   6、org.jiaozhu.commonTools.net.URLUtil 将相对、绝对路径转换为URL对象，用于网络或文件流的读写，Setting的配置依赖此工具包
+   6、org.jiaozhu.commonTools.net.URLUtil 
+   
+        将相对、绝对路径转换为URL对象，用于网络或文件流的读写，Setting的配置依赖此工具包
 	
 四、线程相关工具类
 
-   1、org.jiaozhu.commonTools.thread.BaseRunnable 此类实现了Runnable接口，扩展了功能。		 
+   1、org.jiaozhu.commonTools.thread.BaseRunnable 
+   
+         此类实现了Runnable接口，扩展了功能。	
 		 增加名称、ID，调用次数和时间统计、线程停止接口等，并且在线程运行时，不允许此线程第二次启动。
 
-   2、org.jiaozhu.commonTools.thread.Executor 线程池工具类		
+   2、org.jiaozhu.commonTools.thread.Executor 
+   
+        线程池工具类
 		调用静态方法execute()启动线程，此线程在公共的线程池中执行
 		若想自定义线程池大小或独立控制，可调用newExecutor()实例化一个线程池
 		excAsync()执行一个异步方法
 	
-   3、org.jiaozhu.commonTools.thread.SyncQueue 阻塞队列，简化了JDK的BlockingQueue
+   3、org.jiaozhu.commonTools.thread.SyncQueue 
+   
+        阻塞队列，简化了JDK的BlockingQueue
